@@ -11,7 +11,7 @@ module FormsLab
       erb :'/pirates/new' 
     end #renders the form where user can submit pirate and ship info 
     
-    post '/pirates' do 
+    post '/pirates/show' do 
       @pirate = Pirate.new(params[:pirate])
       params[:pirate][:ships].each do |attributes|
         Ship.new(attributes)
